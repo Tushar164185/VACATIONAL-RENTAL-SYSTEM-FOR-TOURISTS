@@ -1,0 +1,24 @@
+<%layout("/listings/boilerplate")%>
+<form action="/signUp"  class="needs-validation" style="height: 100vh;" novalidate method="post">
+    <div class="row">
+        <h2 class="col-5 offset-3">Sign up for RoyalTravellers</h2>
+        <div class="col-5 offset-3">
+            <label for="exampleFormControlInput1" class="form-label"><h4>Email address</h4></label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" required name="email">
+        </div>
+        <div class="col-5 offset-3">
+            <label for="exampleFormControlInput1" class="form-label"><h4>Username</h4></label>
+            <input type="username" class="form-control" id="exampleFormControlInput1" required name="username">
+        </div>
+        <br>
+        <br>
+        <div class="col-5 offset-3">
+            <label for="exampleFormControlInput1" class="form-label"><h4>Password</h4></label>
+            <input type="password" class="form-control" id="exampleFormControlInput1" required name="password">
+        </div>
+        <br>
+        <br>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary offset-3" role="button">Submit</button>
+</form>

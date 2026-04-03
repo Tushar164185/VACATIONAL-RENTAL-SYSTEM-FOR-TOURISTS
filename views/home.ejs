@@ -1,0 +1,28 @@
+<%layout("/listings/boilerplate")%>
+<body>
+   <div class="row row-cols-lg-3" id="R">
+    <% for(data of data){%>
+        <a href="/show/<%=data.id%>" class="link">
+          <div class="card-listing" style="width: 20rem;">
+            <img src=<%=data.image.url%> class="card-img-top" alt="...">
+            <div class="card-body">
+              <%=data.title%>
+              <br>
+              <p>&#8377;<%= data.price.toLocaleString("en-IN")%>/Night <i class="tax">+18%GST</i></p><br>
+            </div>
+          </div>
+        </a>
+          <%} %>
+   </div>
+   <script>
+    let toggle=document.getElementById("flexSwitchCheckDefault");
+    toggle.addEventListener("click",()=>{
+      let tax=document.getElementsByClassName("tax");
+      for(sin of tax){
+        if(sin.style.display=="none") sin.style.display="inline";
+        else sin.style.display="none";
+      }
+    })
+  </script>
+</body>
+</html>

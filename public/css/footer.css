@@ -1,0 +1,51 @@
+
+#P{
+    display: inline;
+    margin-right: 7px;
+
+}
+#s{
+    display: inline;
+    margin-right:7px ;
+
+}
+#c{
+    display: inline;
+
+}
+#c:hover{
+    text-decoration: underline;
+}
+#P:hover{
+    text-decoration: underline;
+}
+#s:hover{
+    text-decoration: underline;
+}
+.last{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+}
+.symbols{
+    display: flex;
+    justify-content: center;
+}
+.V{
+    background-color: rgb(65, 59, 59,0.15);
+}
+#F{
+    margin-right: 7px;
+}
+#I{
+    margin-right: 7px;
+}
+body{
+    min-height: 100vh;
+}
+

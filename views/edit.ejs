@@ -1,0 +1,35 @@
+<%layout("/listings/boilerplate")%>
+<body>
+    <h2>Edit Your Listing</h2>
+    <form method="post" action="/edit/<%=listing.id%>?_method=PUT" class="needs-validation" novalidate enctype="multipart/form-data">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Title</label>
+    <input type="text" name="title" class="form-control" id="exampleFormControlInput1" value="<%=listing.title%>" required>
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3" required><%=listing.description%></textarea>
+    </div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput2" class="form-label">Image URL</label>
+    <input type="file" class="form-control" name="image.url" id="exampleFormControlInput2" required>
+    </div>
+    <div class="col-md-6">
+    <label for="inputEmail4ds" class="form-label">Price</label>
+    <input type="number" name="price" class="form-control" id="inputEmail4ds" value="<%=listing.price%>" required>
+    </div>
+    <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Location</label>
+    <input type="text" id="inputPassword4" name="location" class="form-control" value="<%=listing.location%>" required>
+    </div>
+    <div class="col-md-6">
+    <label for="country" class="form-label">Country</label>
+    <input type="text" id="country" name="country" class="form-control" value="<%=listing.country%>" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-danger btn-lg">Edit</button>
+    <br>
+    <br>
+    </form>
+</body>
+</html>
