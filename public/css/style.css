@@ -1,0 +1,110 @@
+.navbar-brand{
+    color: red !important;
+}
+.fa-compass{
+    font-size: larger;
+}
+.card-listing{
+    border: none !important;
+    margin-top: 15px !important;
+}
+.card-listing:hover{
+    border: none !important;
+    margin-top: 15px !important;
+    background-color: rgba(225,225,225,0);
+}
+.card-img-top{
+    border-radius: 10px;
+    height: 300px;
+}
+#R{
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-body-listing{
+    padding-top:0px !important;
+
+}
+.card-body-listing:hover{
+    color: black;
+    text-decoration: solid;
+
+}
+.link{
+    text-decoration: none;
+}
+#P{
+    display: inline;
+    margin-right: 7px;
+
+}
+#s{
+    display: inline;
+    margin-right:7px ;
+
+}
+#c{
+    display: inline;
+
+}
+#c:hover{
+    text-decoration: underline;
+}
+#P:hover{
+    text-decoration: underline;
+}
+#s:hover{
+    text-decoration: underline;
+}
+.last{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 10px;
+}
+.info{
+    display: flex;
+    justify-content: center;
+}
+.symbols{
+    display: flex;
+    justify-content: center;
+}
+#F{
+    margin-right: 7px;
+}
+#I{
+    margin-right: 7px;
+}
+.filters{
+    margin-left: 110px;
+}
+.filter{
+    margin-top:0px;
+    margin-right: 40px;
+    display:inline-block;
+    opacity: 0.8;
+}
+.filter:hover{
+    opacity: 1;
+}
+.writeoff{
+    margin-bottom: 0px;
+}
+.Tax-switch{
+    display:inline-block;
+    margin-top: 0px;
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 8px 8px 8px 8px;
+}
+.tax{
+    display: inline;
+}
+#btn{
+    margin-left: 5px;
+    border-radius: 15px;
+}
+
+

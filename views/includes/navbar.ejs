@@ -1,0 +1,73 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/show"><i class="fa-regular fa-compass"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/show">Explore</a>
+        </div>
+        <div class="ms-auto">
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          </form>
+        </div>
+        <button type="button" class="btn btn-outline-danger" id="btn">Search</button>
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/show/new">Airbnb Your Home</a>
+          <% if(!user){%>
+          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          <a class="nav-link" href="/User">signUp</a>
+          <% } %>
+          <%if(user){ %>
+          <a class="nav-link" href="/logOut">Logout</a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="filters">
+    <div class="filter">
+      <i class="fa-solid fa-fire"></i>
+      <p class="writeoff">Trending</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-bed"></i>
+      <p class="writeoff">rooms</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-city"></i>
+      <p class="writeoff">Iconic cities</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-mountain-sun"></i>
+      <p class="writeoff">Mountains</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-castle"></i>
+      <p class="writeoff">castels</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-person-swimming"></i>
+      <p class="writeoff">Sea</p>
+    </div>
+    <div class="filter">
+      <i class="fa-solid fa-tent"></i>
+      <p class="writeoff">Camp</p>
+    </div>
+    <div class="filter">
+      <i class="fa-sharp fa-solid fa-farm"></i>
+      <p class="writeoff">Farms</p>
+    </div>
+    <div class="filter">
+      <i class="fa-regular fa-igloo"></i>
+      <p class="writeoff">artic</p>
+    </div>
+    <div class="Tax-switch">
+      <div class="form-check-reverse form-switch">
+        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+        <label class="form-check-label" for="flexSwitchCheckDefault">Display tax after toggle</label>
+      </div>
+    </div>
+  </div>

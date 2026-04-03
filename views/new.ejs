@@ -1,0 +1,35 @@
+<%layout("/listings/boilerplate")%>
+<body>
+    <h2>Add new Listing</h2>
+    <form method="post" action="/show/add" class="needs-validation" novalidate enctype="multipart/form-data">
+        <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" class="form-control" name="add[title]" id="exampleFormControlInput1" placeholder="Title" required>
+        </div>
+        <div class="mb-3">
+        <label for="exampleFormControlTextarea12" class="form-label">Description</label>
+        <textarea class="form-control" id="exampleFormControlTextarea12"  name="add[description]"rows="3" placeholder="Description" required></textarea>
+        </div>
+        <div class="mb-3">
+        <label for="exampleFormControlInput2" class="form-label">Upload Image</label>
+        <input type="file" class="form-control" name="add[image]"id="exampleFormControlInput2" placeholder="Enter image url">
+        </div>
+        <div class="col-md-6">
+        <label for="inputEmail4ds" class="form-label">Price</label>
+        <input type="number" class="form-control" name="add[price]" id="inputEmail4ds" placeholder="price in INR" required>
+        </div>
+        <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Location</label>
+        <input type="text" id="inputPassword4" name="add[location]" class="form-control" placeholder="Enter location" required>
+        </div>
+        <div class="col-md-6">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" id="country" name="add[country]" class="form-control" placeholder="Enter your country" required>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-dark">Add</button>
+        <br>
+        <br>
+    </form>
+</body>
+</html>
