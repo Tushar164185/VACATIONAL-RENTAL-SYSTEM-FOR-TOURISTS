@@ -79,7 +79,7 @@ app.get("/logOut",(req,res,next)=>{
              return next(err);
         }
     req.flash("msg","You are succesfully logout.");
-    res.redirect("/show");
+    res.redirect("/");
    });
 })
 app.post("/loginpost",
@@ -87,7 +87,7 @@ app.post("/loginpost",
     failureRedirect:"/login",failureFlash:true}),
     async(req,res,next)=>{
         req.flash("msg","Welcome Back!");
-        let redirect=res.locals.redirectUrl||"/show";
+        let redirect=res.locals.redirectUrl||"/";
         res.redirect(redirect);
 })
 app.post("/signUp", async(req,res,next)=>{
@@ -97,10 +97,10 @@ app.post("/signUp", async(req,res,next)=>{
     req.login(newUser,(err)=>{
         if(err) return next(err);
     req.flash("msg","Welcome to RoyalTravellers");
-    res.redirect("/show");
+    res.redirect("/");
     })
 });
-app.get("/show",async(req,res,next)=>{
+app.get("/",async(req,res,next)=>{
      const data = await model.find({});
      res.render("home.ejs",{data});
 })
@@ -119,7 +119,7 @@ app.post("/show/add",upload.single('add[image]'),async (req,res,next)=>{
     await newdata.save();
     console.log(newdata);
     req.flash("msg","Listing added succesfully");
-    res.redirect("/show");
+    res.redirect("/");
 })
 app.put("/edit/:id",isowner,upload.single('image.url'),async(req,res,next)=>{
     let {id} = req.params;
@@ -137,7 +137,7 @@ app.delete("/show/delete/:id",isLogged,isowner,async(req,res,next)=>{
     let {id} = req.params;
     await model.findByIdAndDelete(id);
     req.flash("msg","Listing deleted successfully");
-    res.redirect("/show");
+    res.redirect("/");
 })
 app.get("/show/edit/:id",isLogged,async(req,res,next)=>{
     let {id} = req.params;
