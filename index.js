@@ -173,7 +173,7 @@ const intdb= async()=>{
     let listing=await model.insertMany(newArr);
     console.log(listing);
 }
-//intdb();
+intdb();
 app.use((err,req,res,next)=>{
     console.log(err);
     res.send("SOMETHING WENT ERROR");
