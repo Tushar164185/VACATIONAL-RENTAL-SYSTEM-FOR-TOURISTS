@@ -22,7 +22,7 @@ const { isowner,isReviewOwner } = require("./middleware.js");
 const multer  = require('multer')
 const {storage}=require("./cloudinary.js");
 const upload = multer({storage});
-const url=process.env.Url;
+const url=process.env.url;
 app.use(methodoverride("_method"));
 app.use(express.urlencoded({extended:true}));
 app.listen("8080",(req,res)=>{
